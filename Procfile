@@ -1,0 +1,1 @@
+web: gunicorn ohm:app --log-file -
