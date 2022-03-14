@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/)
+@app.route('/')
 def inicio():
 	return ("Para acceder al servicio se debe acceder a las rutas url + /potencial ó /corriente ó /resistencia")
 
