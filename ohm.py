@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def inicio():
-	return ("Para acceder al servicio se debe acceder a las rutas url + /potencial ó /corriente ó /resistencia")
+	return jsonify({"mensaje":"Para acceder al servicio se debe acceder a las rutas url + /potencial ó /corriente ó /resistencia"})
 
 @app.route('/potencial/<string:corriente>&<string:resistencia>')
 def getPotencial(corriente, resistencia):
