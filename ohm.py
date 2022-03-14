@@ -2,6 +2,10 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route('/)
+def inicio():
+	return ("Para acceder al servicio se debe acceder a las rutas url + /potencial ó /corriente ó /resistencia")
+
 @app.route('/potencial/<string:corriente>&<string:resistencia>')
 def getPotencial(corriente, resistencia):
 	potencial = float(corriente) * float(resistencia)
